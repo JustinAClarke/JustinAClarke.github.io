@@ -6,7 +6,12 @@
 	background-color: rgba(255,255,255,0.8);
 }
 body{
-	background-image: url("../images/background.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-image: 	url("../images/background.jpg");
+	background-size: 	100%;
+	background-repeat:	no-repeat;
+	background-position:	50% 50%;
+	background-attachment:	scroll;
+	background-clip:	border-box;
+	background-origin:	padding-box;
+	background-size:	cover;
 }
