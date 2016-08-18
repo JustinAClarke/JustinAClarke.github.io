@@ -9,3 +9,7 @@ body{
 	background-image: url("../images/background.jpg");
 	background-size: 100%;
 }
+.icon svg{
+	width:20px;
+	heigh: auto;;
+}
