@@ -1,0 +1,84 @@
+.container {
+    margin-top: 5%;
+    min-height: 90%;
+    height: auto;
+    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.icon svg {
+    width: 20px;
+    heigh: auto;
+}
+
+#main {
+    background: rgba(0, 0, 0, 0) url("/assets/images/background.jpeg") no-repeat scroll center center / cover;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#loading {
+    -webkit-animation: flickerAnimation 1.2s infinite;
+    -moz-animation: flickerAnimation 1.2s infinite;
+    -o-animation: flickerAnimation 1.2s infinite;
+    animation: flickerAnimation 1.2s infinite;
+}
+
+#error {
+    display: none;
+}
