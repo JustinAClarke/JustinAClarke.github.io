@@ -5,9 +5,23 @@
 	box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.25);
 	background-color: rgba(255,255,255,0.8);
 }
+<<<<<<< HEAD
 .icon svg{
 	width:20px;
 	heigh: auto;;
+=======
+#main{
+    background: rgba(0, 0, 0, 0) url("../images/background.jpg") no-repeat scroll center center / cover ;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+html, body{
+	width:100%;
+	height:100%;
+>>>>>>> master
 }
 #main{
     background: rgba(0, 0, 0, 0) url("../images/background.jpeg") no-repeat scroll center center / cover ;
