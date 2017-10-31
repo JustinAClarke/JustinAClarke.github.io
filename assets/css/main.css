@@ -12,7 +12,7 @@
 }
 
 #main {
-    background: rgba(0, 0, 0, 0) url("/assets/images/background.jpeg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("/assets/images/background.jpg") no-repeat scroll center center / contain;
     display: table;
     height: 100%;
     position: relative;

@@ -34,7 +34,7 @@
                 return;
             }
             repos = repos.concat(result.data);
-            // repos = result;
+            //repos = result;
             console.log(repos);
             if (result.data && result.data.length == 100) {
                 addRepos(repos, page + 1);
