@@ -82,3 +82,12 @@ html, body {
 #error {
     display: none;
 }
+
+.new{
+    padding-top: 10px;
+    color: #f00;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: larger;
+}
