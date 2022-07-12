@@ -27,7 +27,7 @@
             // API Rate limiting catch
             if (result.data && result.data.message  || !result.data) {
                 $('<p class="alert alert-warning">').text('Your IP has hit github\'s rate limit per hour.').appendTo('#error');
-                $('<a href="https://github.com/JustinAClarke/repositories">').text('Please click here to view all Repos').appendTo('#error');
+                $('<a href="https://github.com/JustinAClarke?tab=repositories">').text('Please click here to view all Repos').appendTo('#error');
                 $('#error').show();
                 $('#loading').hide();
 
