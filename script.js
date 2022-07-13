@@ -25,22 +25,18 @@
         // var uri = '/repos.json';
         $.getJSON(uri, function(result) {
             // API Rate limiting catch
-<<<<<<< HEAD
-            if (result.data && result.data.message) {
-                $('<p class="text-error">').text('Your IP has hit github\'s rate limit per hour.').appendTo('.hero-block');
-=======
-            if (result.data && result.data.message  || !result.data) {
+            if (result && 0 === result.length) {
                 $('<p class="alert alert-warning">').text('Your IP has hit github\'s rate limit per hour.').appendTo('#error');
                 $('<a href="https://github.com/JustinAClarke?tab=repositories">').text('Please click here to view all Repos').appendTo('#error');
                 $('#error').show();
                 $('#loading').hide();
 
->>>>>>> 4567d15 (update script to dynamically get updated repos)
                 return;
             }
-            // repos = repos.concat(result.data);
             repos = result;
-            if (result.data && result.data.length == 100) {
+            //repos = result;
+            console.log(repos);
+            if (result.length == 100) {
                 addRepos(repos, page + 1);
             } else {
                 $.each(repos, function(i, repo) {
