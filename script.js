@@ -21,22 +21,22 @@
     function addRepos(repos, page) {
         repos = repos || [];
         page = page || 1;
-        var uri = 'https://api.github.com/users/justinfuhrmeister-clarke/repos?callback=?' + '&per_page=100' + '&page=' + page;
+        var uri = 'https://api.github.com/users/JustinAClarke/repos?per_page=100&page=1';
         // var uri = '/repos.json';
         $.getJSON(uri, function(result) {
             // API Rate limiting catch
-            if (result.data && result.data.message  || !result.data) {
+            if (result && 0 === result.length) {
                 $('<p class="alert alert-warning">').text('Your IP has hit github\'s rate limit per hour.').appendTo('#error');
-                $('<a href="https://github.com/JustinFuhrmeister-Clarke/repositories">').text('Please click here to view all Repos').appendTo('#error');
+                $('<a href="https://github.com/JustinAClarke?tab=repositories">').text('Please click here to view all Repos').appendTo('#error');
                 $('#error').show();
                 $('#loading').hide();
 
                 return;
             }
-            repos = repos.concat(result.data);
+            repos = result;
             //repos = result;
             console.log(repos);
-            if (result.data && result.data.length == 100) {
+            if (result.length == 100) {
                 addRepos(repos, page + 1);
             } else {
                 $.each(repos, function(i, repo) {
